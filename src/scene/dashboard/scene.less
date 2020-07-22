@@ -27,7 +27,6 @@
       }
       .user-info {
         padding: 3px 10px;
-
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, .08);
         & > * {
           margin: 0 5px;
@@ -37,8 +36,13 @@
   }
   .menu {
     background: @menuBackgroundColor;
+    width: 150px;
   }
   .main {
     position: relative;
+    .main-page {
+      height: calc(100vh - 120px);
+      background: #ffffff;
+    }
   }
 }
