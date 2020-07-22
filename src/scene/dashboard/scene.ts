@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import eMenu from '@/components/menu/index.vue'
 import eLogo from '@/components/logo/index.vue'
+import eCopyright from '@/components/copyright/index.vue'
 
 export default Vue.extend({
   components: {
     eMenu,
-    eLogo
+    eLogo,
+    eCopyright
   },
   data () {
     return {
