@@ -1,4 +1,4 @@
-import Home from '@/views/Home.vue'
+// import Home from '@/views/Home.vue'
 import Dashboard from '@/scene/dashboard/index.vue'
 import SignIn from '@/scene/signIn/index.vue'
 import { VueConstructor } from 'vue'
@@ -14,11 +14,11 @@ interface RouteItem {
   children?: Array<RouteItem>;
 }
 const routes: Array<RouteItem> = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
+  // {
+  //   path: '/',
+  //   name: 'Home',
+  //   component: Home
+  // },
   {
     path: '/signin',
     name: 'SignIn',

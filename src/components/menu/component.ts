@@ -1,14 +1,17 @@
-import Vue from 'vue'
+import Vue, { VueConstructor } from 'vue'
 import routes from '@/router/routes/routes'
 
-interface MenuItem {
+interface RouteItem {
+  path: string | null;
+  name: string;
   text?: string;
+  isMenu?: boolean;
   icon?: string;
   fa?: string;
-  path?: string;
-  children: Array<MenuItem>;
+  component: Function | VueConstructor;
+  children?: Array<RouteItem>;
 }
-const menu: Array<MenuItem> = []
+const menu: Array<RouteItem> = []
 const Component = Vue.extend({
   data () {
     return {
@@ -23,7 +26,7 @@ const Component = Vue.extend({
   methods: {
     formatRoutes () {
       // 根据路由文件生成菜单
-      const menu: Array<MenuItem> = []
+      const menu: Array<RouteItem> = []
       routes.map((e) => {
         if (e.isMenu) {
           console.log(e)
