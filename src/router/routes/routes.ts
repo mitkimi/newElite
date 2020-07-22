@@ -1,6 +1,8 @@
 import Home from '@/views/Home.vue'
 import Dashboard from '@/scene/dashboard/index.vue'
 import SignIn from '@/scene/signIn/index.vue'
+import { VueConstructor } from 'vue'
+
 interface RouteItem {
   path: string | null;
   name: string;
@@ -8,7 +10,7 @@ interface RouteItem {
   isMenu?: boolean;
   icon?: string;
   fa?: string;
-  component: any;
+  component: Function | VueConstructor;
   children?: Array<RouteItem>;
 }
 const routes: Array<RouteItem> = [
@@ -24,6 +26,10 @@ const routes: Array<RouteItem> = [
   },
   /**
    * isMenu 属性告知程序是否用于渲染菜单，只在首层路由中有效
+   * icon 属性告知渲染菜单时使用 ElementUI 提供的 icon，非必选
+   * fa 属性告知渲染菜单时使用 font awesome 时的类名，非必选
+   * text 属性告知渲染菜单时显示的蚊子
+   * children 属性用于渲染子路由（数组），当且仅当只有一个数组成员时，将会渲染在一级菜单上
    */
   {
     path: '/dashboard',
