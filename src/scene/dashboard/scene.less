@@ -1,0 +1,41 @@
+@import '../../assets/base/bash.less';
+
+.dashboard-container {
+  width: 100vw;
+  height: 100vh;
+  background: @pageBackgroundColor;
+  .header {
+    background: @headerBackgroundColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .system-info-container {
+      & > * {
+        margin: 0 5px;
+        cursor: pointer;
+        transition: all, 300ms;
+        border-radius: 6px;
+        &:hover {
+          background: #ffffff;
+        }
+      }
+      .button {
+        color: #999999;
+        margin: 0 10px;
+        padding: 10px;
+        
+      }
+      .user-info {
+        padding: 3px 10px;
+
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, .08);
+        & > * {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+  .menu {
+    background: @menuBackgroundColor;
+  }
+}

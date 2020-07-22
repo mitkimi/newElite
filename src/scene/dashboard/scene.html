@@ -1,0 +1,44 @@
+<el-container class="dashboard-container">
+  <el-header class="header">
+    <e-logo></e-logo>
+    <div class="system-info-container flex-center-row">
+      <transition name="el-fade-in-linear">
+        <div class="button" v-show="loading">
+          <el-tooltip effect="dark" content="加载中">
+            <i class="el-icon-loading"></i>
+          </el-tooltip>
+        </div>
+      </transition>
+      <div class="button">
+        <el-tooltip effect="dark" content="链接正常">
+          <i class="el-icon-connection"></i>
+        </el-tooltip>
+      </div>
+      <div class="button">
+        <el-tooltip effect="dark" content="您有12条未读消息">
+          <el-badge :value="12">
+            <i class="el-icon-message"></i>
+          </el-badge>
+        </el-tooltip>
+      </div>
+      <div class="button">
+        <el-tooltip effect="dark" content="去网站">
+          <i class="el-icon-link"></i>
+        </el-tooltip>
+      </div>
+      <div class="user-info flex-center-row">
+        <el-avatar shape="circle" :src="headImgUrl"></el-avatar>
+        <div class="name">田昊天</div>
+        <i class="el-icon-arrow-down el-icon--right"></i>
+      </div>
+    </div>
+  </el-header>
+  <el-container>
+    <el-aside class="menu">
+      <e-menu></e-menu>
+    </el-aside>
+    <el-main class="main">
+      <router-view />
+    </el-main>
+  </el-container>
+</el-container>
