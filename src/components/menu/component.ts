@@ -21,11 +21,11 @@ const Component = Vue.extend({
     }
   },
   mounted () {
-    this.formatRoutes()
+    this.formmater()
     this.formatDefaultActive()
   },
   methods: {
-    formatRoutes () {
+    formmater () {
       // 根据路由文件生成菜单
       const menu: Array<RouteItem> = []
       routes.map((e) => {

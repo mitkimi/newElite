@@ -1,3 +1,4 @@
+@import '../../../assets/base/bash.less';
 .page {
   width: 100%;
   .card {
@@ -12,7 +13,7 @@
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      background: #67C23A;
+      background: #F56C6C;
       color: #ffffff;
       font-size: 50px;
       text-align: center;
@@ -36,8 +37,35 @@
     background: #fafafa;
     margin: 0 auto;
     margin-top: 40px;
-    .steps {
-      margin: 40px 0;
+    .name {
+      font-weight: bold;
+    }
+    .infos {
+      margin: 20px 0;
+      p {
+        line-height: 28px;
+        font-size: 14px;
+        &:before {
+          content: 'x';
+          border: 1px solid #F56C6C;
+          color: #F56C6C;
+          border-radius: 50%;
+          line-height: 16px;
+          text-align: center;
+          width: 16px;
+          height: 16px;
+          display: inline-block;
+          margin-right: 10px;
+        }
+        a:link, a:visited {
+          color: #47afff;
+          text-decoration: none;
+          transition: all, .3s;
+        }
+        a:hover, a:active {
+          opacity: .7;
+        }
+      }
     }
   }
   .buttons {

@@ -9,14 +9,14 @@
         <template slot="title">
           <i v-if="item.icon" :class="item.icon"></i>
           <i v-else-if="item.fa" :class="item.fa" style="margin: 0 10px 0 5px;"></i>
-          <span>{{item.text}}</span>
+          <span>{{item.label}}</span>
         </template>
-        <el-menu-item v-for="subItem,subIndex in item.children" :key="subIndex" :index="item.path + '/' +subItem.path">{{subItem.text}}</el-menu-item>
+        <el-menu-item v-for="subItem,subIndex in item.children" :key="subIndex" :index="item.path + '/' +subItem.path">{{subItem.label}}</el-menu-item>
       </el-submenu>
       <el-menu-item v-else :index="item.path">
         <i v-if="item.icon" :class="item.icon"></i>
         <i v-else-if="item.fa" :class="item.fa" style="margin: 0 10px 0 5px;"></i>
-        <span>{{item.text}}</span>
+        <span>{{item.label}}</span>
       </el-menu-item>
     </div>
   </el-menu>

@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "upload": "scp -r ./dist/* root@47.104.80.66:/home/www/elite@series/preview/dist"
   },
   "dependencies": {
     "@types/nprogress": "^0.2.0",
