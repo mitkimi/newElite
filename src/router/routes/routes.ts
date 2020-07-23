@@ -142,13 +142,13 @@ const routes: Array<RouteItem> = [
         path: 'success',
         name: 'SuccessResult',
         text: '成功页',
-        component: () => import('../../views/home/index.vue')
+        component: () => import('../../views/result/success/index.vue')
       },
       {
         path: 'fail',
         name: 'FailResult',
         text: '失败页',
-        component: () => import('../../views/home/index.vue')
+        component: () => import('../../views/result/fail/index.vue')
       }
     ]
   },
@@ -164,19 +164,19 @@ const routes: Array<RouteItem> = [
         path: '403',
         name: '403Error',
         text: '403 无访问权限',
-        component: () => import('../../views/home/index.vue')
+        component: () => import('../../views/error/403/index.vue')
       },
       {
         path: '404',
         name: '404Error',
         text: '404 找不到页面',
-        component: () => import('../../views/home/index.vue')
+        component: () => import('../../views/error/404/index.vue')
       },
       {
         path: '500',
         name: '500Error',
         text: '500 服务器出错',
-        component: () => import('../../views/home/index.vue')
+        component: () => import('../../views/error/500/index.vue')
       }
     ]
   },

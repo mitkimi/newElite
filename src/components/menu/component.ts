@@ -16,6 +16,7 @@ const Component = Vue.extend({
   data () {
     return {
       active: '/user/profile',
+      isCollapse: false,
       menu
     }
   },
